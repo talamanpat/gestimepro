@@ -17,7 +17,10 @@ class ApplicationController < ActionController::Base
   end
 
   def is_admin
-    @current_user.admin?
+    if !User.find(session[:user_id]).admin?
+      flash[:notice] = "Sorry, no tiene permisos"
+      redirect_to root_url
+    end
   end
 
 

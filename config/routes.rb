@@ -6,6 +6,7 @@ Gestimepro3::Application.routes.draw do
   root :to => "tareas#index"
 
 
+
   resources :users
   match "users/create" => "users#create", :as => "users"
 

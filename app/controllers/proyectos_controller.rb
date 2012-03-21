@@ -1,4 +1,5 @@
 class ProyectosController < ApplicationController
+  before_filter :is_admin
   # GET /proyectos
   # GET /proyectos.json
   def index
