@@ -8,7 +8,8 @@ Gestimepro3::Application.routes.draw do
 
 
   resources :users
-  match "users/create" => "users#create", :as => "users"
+  match "users/create" => "users#create", :as => "users", :via => :post
+  match "users" => "users#index", :as => "users", :via => :get
 
 
   resources :sessions

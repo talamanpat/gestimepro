@@ -2,6 +2,9 @@ class ApplicationController < ActionController::Base
   before_filter :check_auth
   protect_from_forgery
   helper_method :current_user
+  def usuario_actual
+
+  end
 
   private
   def current_user
