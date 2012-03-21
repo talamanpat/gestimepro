@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @tarea.nombre %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @tarea.descripcion %>
+</p>
+
+<p>
+  <b>Inicio:</b>
+  <%= @tarea.inicio %>
+</p>
+
+<p>
+  <b>Termino:</b>
+  <%= @tarea.termino %>
+</p>
+<p>
+  <b>Usuario:</b>
+     <%= @tarea.user.email %>
+</p>
+<p>
+  <b>Proyecto:</b>
+      <%= @tarea.proyecto.nombre %>
+</p>
+
+<%= link_to 'Edit', edit_tarea_path(@tarea) %> |
+<%= link_to 'Back', tareas_path %>
