@@ -1,0 +1,27 @@
+<h1><%= @user.nombre.to_s + " " + @user.apellido.to_s + " (" + @user.email.to_s + ")"  %></h1>
+
+    <h2>Tareas</h2>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th>Inicio</th>
+    <th>Termino</th>
+    <th>Proyecto</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @user.tareas.each do |tarea| %>
+      <tr>
+        <td><%= tarea.nombre %></td>
+        <td><%= tarea.descripcion.truncate(30) %></td>
+        <td><%= tarea.inicio %></td>
+        <td><%= tarea.termino %></td>
+        <td><%= tarea.proyecto.nombre   %></td>
+        <td><%= link_to 'Show', tarea %></td>
+        <td><%= link_to 'Edit', edit_tarea_path(tarea) %></td>
+      </tr>
+  <% end %>
+</table>

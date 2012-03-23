@@ -27,7 +27,6 @@ class TareasController < ApplicationController
   def new
     @tarea = Tarea.new
     @proyectos = Proyecto.all
-    @usuarios = Usuario.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -38,6 +37,7 @@ class TareasController < ApplicationController
   # GET /tareas/1/edit
   def edit
     @tarea = Tarea.find(params[:id])
+    @proyectos = Proyecto.all
   end
 
   # POST /tareas

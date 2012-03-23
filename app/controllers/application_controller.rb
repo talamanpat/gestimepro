@@ -1,7 +1,14 @@
 class ApplicationController < ActionController::Base
-  before_filter :check_auth
+  before_filter :check_auth, :set_locale
   protect_from_forgery
   helper_method :current_user
+
+
+  def set_locale
+    I18n.locale = 'es-CL'
+  end
+
+
   def usuario_actual
 
   end

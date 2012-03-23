@@ -23,7 +23,7 @@
     <td><%= tarea.proyecto.nombre   %></td>
     <td><%= link_to 'Show', tarea %></td>
     <td><%= link_to 'Edit', edit_tarea_path(tarea) %></td>
-    <td><%= link_to 'Destroy', tarea, confirm: 'Are you sure?', method: :delete %></td>
+    <td><% link_to 'Destroy', tarea, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
