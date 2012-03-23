@@ -7,6 +7,7 @@
     <th>Descripcion</th>
     <th>Inicio</th>
     <th>Termino</th>
+    <th>Total</th>
     <th>Proyecto</th>
     <th></th>
     <th></th>
@@ -17,8 +18,9 @@
       <tr>
         <td><%= tarea.nombre %></td>
         <td><%= tarea.descripcion.truncate(30) %></td>
-        <td><%= tarea.inicio %></td>
-        <td><%= tarea.termino %></td>
+        <td><%= tarea.inicio.strftime("%d-%m-%Y %H:%M") %></td>
+        <td><%= tarea.termino.strftime("%H:%M") %></td>
+        <td><%= tarea.total %></td>
         <td><%= tarea.proyecto.nombre   %></td>
         <td><%= link_to 'Show', tarea %></td>
         <td><%= link_to 'Edit', edit_tarea_path(tarea) %></td>

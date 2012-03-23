@@ -37,6 +37,7 @@ class TareasController < ApplicationController
   # GET /tareas/1/edit
   def edit
     @tarea = Tarea.find(params[:id])
+    print @tarea.hora_inicio
     @proyectos = Proyecto.all
   end
 

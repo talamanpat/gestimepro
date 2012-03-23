@@ -10,12 +10,18 @@
 
 <p>
   <b>Inicio:</b>
-  <%= @tarea.inicio %>
+  <%= @tarea.inicio.strftime("%d-%m-%Y %H:%M") %>
 </p>
 
 <p>
   <b>Termino:</b>
-  <%= @tarea.termino %>
+  <%= @tarea.termino.strftime("%H:%M") %>
+
+
+
+<p>
+  <b>Total:</b>
+<%= @tarea.total %>
 </p>
 <p>
   <b>Usuario:</b>
