@@ -24,7 +24,7 @@ class Tarea < ActiveRecord::Base
   #          :presence => true
 
   #validates :hora_termino,
-  #          :presence => true
+  # #         :presence => true
 
 
   
