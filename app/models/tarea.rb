@@ -17,14 +17,14 @@ class Tarea < ActiveRecord::Base
   validates :nombre,
             :presence => true
 
-  validates :fecha,
-            :presence => true
+  #validates :fecha,
+  #          :presence => true
 
-  validates :hora_inicio,
-            :presence => true
+  #validates :hora_inicio,
+  #          :presence => true
 
-  validates :hora_termino,
-            :presence => true
+  #validates :hora_termino,
+  #          :presence => true
 
 
   
