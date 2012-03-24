@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :proyecto %><br />
-    <%= f.select :proyecto_id , @proyectos.map {|u| [u.nombre,u.id]} %>
+    <%= f.select :proyecto_id , @proyectos.map {|u| [u.nombre,u.id]},  {:include_blank => 'Seleccione un proyecto'} %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -8,6 +8,24 @@ class Tarea < ActiveRecord::Base
 
   attr_accessor :fecha, :hora_inicio, :hora_termino, :total
 
+  validates :proyecto_id,
+            :presence => true
+
+  validates :user_id,
+            :presence => true
+
+  validates :nombre,
+            :presence => true
+
+  validates :fecha,
+            :presence => true
+
+  validates :hora_inicio,
+            :presence => true
+
+  validates :hora_termino,
+            :presence => true
+
 
   
   

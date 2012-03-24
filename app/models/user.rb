@@ -4,10 +4,28 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password, :password_confirmation, :nombre, :apellido, :admin
 
-  validates_confirmation_of :password
-  validates_presence_of :password, :on => :create
-  validates_presence_of :email
-  validates_uniqueness_of :email
+  #validates_confirmation_of :password
+  #validates_presence_of :password, :on => :create
+  #validates_presence_of :email
+  #validates_uniqueness_of :email
+
+
+  validates :email,
+            :presence => true,
+            :uniqueness => { :case_sensitive => false },
+            :format => {:with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i}
+
+
+
+  validates :password,
+            :confirmation => true,
+            :presence => {
+                :on => :create
+            }
+
+  validates :nombre,
+            :presence => true
+
 
   has_many :tareas
 

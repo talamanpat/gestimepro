@@ -52,6 +52,7 @@ class TareasController < ApplicationController
     if @tarea.save
       redirect_to @tarea, notice: 'Tarea was successfully created.'
     else
+      @proyectos = Proyecto.all
       render action: "new"
     end
   end

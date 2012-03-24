@@ -15,7 +15,7 @@
     <td><%= proyecto.descripcion %></td>
     <td><%= link_to 'Show', proyecto %></td>
     <td><%= link_to 'Edit', edit_proyecto_path(proyecto) %></td>
-    <td><%= link_to 'Destroy', proyecto, confirm: 'Are you sure?', method: :delete %></td>
+    <td><% link_to 'Destroy', proyecto, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
