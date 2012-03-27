@@ -6,6 +6,7 @@ class Tarea < ActiveRecord::Base
 
 
 
+
   attr_accessor :fecha, :hora_inicio, :hora_termino, :total
 
   validates :proyecto_id,
