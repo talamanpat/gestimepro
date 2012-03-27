@@ -2,7 +2,7 @@ require "Date"
 class Tarea < ActiveRecord::Base
   belongs_to :proyecto
   belongs_to :user
-  before_save :set_dates
+  before_validation :set_dates
 
 
 
@@ -17,29 +17,39 @@ class Tarea < ActiveRecord::Base
   validates :nombre,
             :presence => true
 
-  #validates :fecha,
-  #          :presence => true
+#  validates :fecha,
+#            :presence => true
 
-  #validates :hora_inicio,
-  #          :presence => true
+#  validates :hora_inicio,
+#            :presence => true
 
-  #validates :hora_termino,
-  #          :presence => true
+#  validates :hora_termino,
+#            :presence => true
+
+  validates :inicio,
+            :presence => true
+
+  validates :termino,
+            :presence => true
 
 
-  
-  
-  
+
+
   def fecha
     if inicio
-       self.fecha = self.inicio.strftime("%d-%m-%Y")
+       self.fecha = self.inicio.strftime("%d/%m/%Y")
+    else if termino
+          self.fecha = self.termino.strftime("%d/%m/%Y")
+         end
     end
   end
+
   def hora_inicio
     if inicio
       self.hora_inicio = self.inicio.strftime("%H:%M")
     end
   end
+
   def hora_termino
     if termino
       self.hora_termino = self.termino.strftime("%H:%M")
@@ -49,8 +59,14 @@ class Tarea < ActiveRecord::Base
 
 
   def set_dates
+    if @fecha.strip != "" && @hora_inicio.strip != ""
      self.inicio = DateTime.strptime(@fecha.to_s + " " + @hora_inicio.to_s,"%d/%m/%Y %H:%M" )
+    end
+    if @fecha.strip != "" && @hora_termino.strip != ""
      self.termino = DateTime.strptime(@fecha.to_s + " " + @hora_termino.to_s,"%d/%m/%Y %H:%M" )
+
+    end
+
   end
 
   def total
@@ -58,5 +74,5 @@ class Tarea < ActiveRecord::Base
   end
 
 
-
 end
+

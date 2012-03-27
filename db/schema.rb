@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(:version => 20120320004816) do
   create_table "tareas", :force => true do |t|
     t.string   "nombre",      :null => false
     t.text     "descripcion"
-    t.datetime "inicio",      :null => false
-    t.datetime "termino",     :null => false
+    t.datetime "inicio"
+    t.datetime "termino"
     t.integer  "user_id",     :null => false
     t.integer  "proyecto_id", :null => false
     t.datetime "created_at",  :null => false
