@@ -1,6 +1,11 @@
 class Proyecto < ActiveRecord::Base
 
+  validates :nombre, :presence => true, :uniqueness => true
+
+
   has_many :tareas
+
+
 
   def horas_totales
     @horas_totales = 0.00
