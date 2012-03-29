@@ -1,0 +1,165 @@
+@charset "UTF-8";
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	background: #E2F0D6;
+	min-width:960px;
+	margin: 0px;
+	height:100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	
+	padding-right: 0px;
+	padding-left: 0px; 
+}
+
+
+a:link {
+	color: #42413C;
+	text-decoration: none; 
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus { 
+	text-decoration: none;
+}
+
+
+
+
+/* Menu Superior */
+.sidebar1 {
+	width: 100%;
+	border-radius: 30px 30px 0px 0px;
+	padding: 0 10px 10px 0;
+	background: #5B693C;
+}
+
+nav ul {
+	float:left;
+	list-style: none;
+}
+
+nav ul li {
+	float:left;
+}
+
+nav ul li a{ 
+	
+	padding: 0px 0px 0px 0px;
+	display: block; 
+	width: 120px; 
+	text-decoration: none;
+	background: #C6D580;
+	
+    margin-right: 5px;  
+ 
+    font-size: 14px;  
+    line-height: 44px;  
+    text-align: center;    
+    color: #FFF; 
+	
+	border-radius: 10px;
+	box-shadow:3px 3px 3px #000;
+	text-shadow: 1px 1px 1px black;
+	
+	-webkit-background-size: 100%;  
+    -o-background-size: 100%;  
+    -khtml-background-size: 100%;
+	
+}
+
+
+nav ul a:hover, nav ul a:active, nav ul a:focus {
+	background: #ADB96E;
+	color: #FFF;
+	box-shadow:inset 3px 3px 3px #000; 
+}
+
+
+.contenedorGeneral{
+	background-color: #5B693C;
+	
+	border-radius: 0px 0px 30px 30px;
+	}
+
+
+
+
+/* Menu Izquierdo */
+.sidebar2 {
+	float: left;
+	width: 210px;
+	height:100%;
+	background: #5B693C;
+	padding: 0px 0px 15px 0px;
+}
+
+.sidebar2 nav ul {
+	list-style: none; 
+}
+
+.sidebar2 nav ul a { 
+	padding: 0px 0px 0px 0px;
+	display: block; 
+	width: 120px; 
+	line-height: 44px; 
+	text-decoration: none;
+	background: #C6D580;
+	margin-bottom:2px;
+	
+	text-align: center; 
+	font-size: 14px; 
+	color: #FFF; 
+	border-radius: 0 0 10px 0;
+	box-shadow:3px 3px 3px #000;
+	text-shadow: 3px 3px 3px black;
+	
+}
+
+.sidebar2 nav ul a:hover, .sidebar2 nav ul a:active, .sidebar2 nav ul a:focus {
+	background: #ADB96E;
+	color: #FFF;
+	box-shadow:inset 3px 3px 3px #000; 
+}
+
+
+.content {
+	width: auto;
+overflow: hidden;
+background: white;
+padding: 20px 20px 60px 20px;
+
+	border-radius: 30px 0px 30px 0px;
+}
+
+
+
+header{
+	width: 100%;
+	padding-bottom: 0px;
+	padding-left: 30px;
+}
+
+.letraTitulo{
+	padding: 10px 10px 0px 0px;
+	font-size:14px;
+	
+	}
+	
+.letraNombre{
+	font-size: 24px;	
+	}
+
+
+
+header, section, footer, aside, nav, article, figure {
+	display: block;
+}
+
+.clear{
+display:clear;
+}
