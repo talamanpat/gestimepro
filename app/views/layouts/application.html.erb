@@ -87,7 +87,7 @@
   <p class="letraTitulo">GesTimePro</p>
 
   <% if current_user %>
-  <h3 class="letraNombre"><%= current_user.email %></h3>
+  <h3 class="letraNombre"><%= current_user.nombre + " " + current_user.apellido + " ("+ current_user.email + ")" %></h3>
   <% end %>
 </header>
 
@@ -106,7 +106,7 @@
       <li><%= link_to "Proyectos", proyectos_path %></li>
       <li><%= link_to "Usuarios", users_path %></li>
       <% end %>
-      <li><%= link_to "Log out", log_out_path %></li>
+      <li><%= link_to "Salir", log_out_path %></li>
 
     </ul>
   </nav>
