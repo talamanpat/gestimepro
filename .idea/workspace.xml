@@ -27,7 +27,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="42" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.48489934">
+            <state line="80" column="73" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.5989933">
               <folding>
                 <element signature="tag#script#0;tag#head#0;tag#html#0" expanded="false" />
               </folding>
@@ -579,7 +579,11 @@
       <created>1333043755058</created>
       <updated>1333043755058</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="agregacion de archivos de diseño y modificacion layout mas push">
+      <created>1333043845121</created>
+      <updated>1333043845121</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -782,7 +786,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="42" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.48489934">
+        <state line="80" column="73" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.5989933">
           <folding>
             <element signature="tag#script#0;tag#head#0;tag#html#0" expanded="false" />
           </folding>
