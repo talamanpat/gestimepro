@@ -51,9 +51,15 @@ module Gestimepro3
     # config.active_record.whitelist_attributes = true
 
     # Enable the asset pipeline
-    config.assets.enabled = true
+    config.assets.enabled = false
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = '1.0'       .
+
+
+
+
+    config.action_view.javascript_expansions[:jui] = %w(jquery-ui-1.8.18.custom.min.js)
+    config.action_view.javascript_expansions[:dt] = %w(jquery.dataTables.js)
   end
 end
