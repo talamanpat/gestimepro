@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to root_url, :notice => "Logueado!"
     else
       flash.now.alert = "Email o password invalido"
-      render "new"
+      render "new" , :layout => 'clean'
     end
   end
 
