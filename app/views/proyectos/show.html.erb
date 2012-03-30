@@ -36,7 +36,7 @@
         <thead>
         <tr>
           <th>Nombre</th>
-          <th>Descripcion</th>
+          <th>Fecha</th>
           <th>Inicio</th>
           <th>Termino</th>
           <th>Total</th>
@@ -48,8 +48,8 @@
         <% @proyecto.tareas.each do |tarea| %>
             <tr>
               <td><%= tarea.nombre %></td>
-              <td><%= tarea.descripcion.truncate(30) %></td>
-              <td><%= tarea.inicio.strftime("%d-%m-%Y %H:%M") %></td>
+              <td><%= tarea.inicio.strftime("%d-%m-%Y") %></td>
+              <td><%= tarea.inicio.strftime("%H:%M") %></td>
               <td><%= tarea.termino.strftime("%H:%M") %></td>
               <td><%= tarea.total %></td>
               <td><%= tarea.user.nombre + " " + tarea.user.apellido + " (" << tarea.user.email + ")"    %></td>
