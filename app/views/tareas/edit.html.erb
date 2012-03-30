@@ -1,6 +1,26 @@
-<h1>Editing tarea</h1>
+<div class="sidebar2">
+  <nav>
+    <ul>
+      <li><%= link_to 'Detalle', @tarea %> </li>
+        <li><%= link_to 'Tareas', tareas_path %>
+      </li>
+    </ul>
+  </nav>
+</div>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @tarea %> |
-<%= link_to 'Back', tareas_path %>
+
+<section class="content">
+
+  <h1>Editar tarea</h1>
+
+  <%= render 'form' %>
+
+</section>
+
+
+
+
+
+
+

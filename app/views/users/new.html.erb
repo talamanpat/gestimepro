@@ -1,39 +1,62 @@
-<h1>Sign Up</h1>
+<div class="sidebar2">
+  <nav>
+    <ul>
+      <li><%= link_to 'Volver', users_path %></li>
+    </ul>
+  </nav>
+</div>
 
-<%= form_for @user do |f| %>
-    <% if @user.errors.any? %>
-        <div class="error_messages">
-          <h2>Form is invalid</h2>
-          <ul>
-            <% for message in @user.errors.full_messages %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-    <p>
-      <%= f.label :nombre %><br />
-      <%= f.text_field :nombre %>
-    </p>
-    <p>
-      <%= f.label :apellido %><br />
-      <%= f.text_field :apellido %>
-    </p>
-    <p>
-      <%= f.label :email %><br />
-      <%= f.text_field :email %>
-    </p>
-    <p>
-      <%= f.label :password %><br />
-      <%= f.password_field :password %>
-    </p>
-    <p>
-      <%= f.label :password_confirmation %>  <br />
-      <%= f.password_field :password_confirmation %>
-    </p>
-    <p>
-      <%= f.label :admin %><br />
-      <%= f.check_box :admin %>
-    </p>
-    <p class="button"><%= f.submit %></p>
-<% end %>
+
+
+<section class="content">
+
+  <h1>Sign Up</h1>
+  <hr>
+
+  <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+          <div class="error_messages">
+            <h2>Formulario es invalido</h2>
+            <ul>
+              <% for message in @user.errors.full_messages %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+      <p>
+        <%= f.label :nombre %><br />
+        <%= f.text_field :nombre %>
+      </p>
+      <p>
+        <%= f.label :apellido %><br />
+        <%= f.text_field :apellido %>
+      </p>
+      <p>
+        <%= f.label :email %><br />
+        <%= f.text_field :email %>
+      </p>
+      <p>
+        <%= f.label :password %><br />
+        <%= f.password_field :password %>
+      </p>
+      <p>
+        <%= f.label :password_confirmation %>  <br />
+        <%= f.password_field :password_confirmation %>
+      </p>
+      <p>
+        <%= f.label :admin %><br />
+        <%= f.check_box :admin %>
+      </p>
+      <hr>
+      <p class="button"><%= f.submit %></p>
+  <% end %>
+
+
+</section>
+
+
+
+
+
+

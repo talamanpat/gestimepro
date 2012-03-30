@@ -1,7 +1,8 @@
+<hr>
 <%= form_for(@tarea) do |f| %>
   <% if @tarea.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@tarea.errors.count, "error") %> prohibited this tarea from being saved:</h2>
+      <h2><%= pluralize(@tarea.errors.count, "error") %>Formulario invalido</h2>
 
       <ul>
       <% @tarea.errors.full_messages.each do |msg| %>
@@ -9,8 +10,14 @@
       <% end %>
       </ul>
     </div>
+        <hr>
   <% end %>
 
+
+    <div class="field">
+      <%= f.label :proyecto %><br />
+      <%= f.select :proyecto_id , @proyectos.map {|u| [u.nombre,u.id]},  {:include_blank => 'Seleccione un proyecto'} %>
+    </div>
   <div class="field">
     <%= f.label :nombre %><br />
     <%= f.text_field :nombre %>
@@ -19,22 +26,20 @@
     <%= f.label :descripcion %><br />
     <%= f.text_area :descripcion %>
   </div>
+    <hr>
     <div class="field">
       <%= f.label :fecha %><br />
-      <%= f.text_field :fecha %>
+      <%= f.text_field :fecha , :class => "datepicker"%>
     </div>
   <div class="field">
     <%= f.label :hora_inicio %><br />
-    <%= f.text_field :hora_inicio %>
+    <%= f.text_field :hora_inicio , :class => "timepicker"%>
   </div>
   <div class="field">
     <%= f.label :hora_termino %><br />
-    <%= f.text_field :hora_termino %>
+    <%= f.text_field :hora_termino , :class => "timepicker"%>
   </div>
-  <div class="field">
-    <%= f.label :proyecto %><br />
-    <%= f.select :proyecto_id , @proyectos.map {|u| [u.nombre,u.id]},  {:include_blank => 'Seleccione un proyecto'} %>
-  </div>
+    <hr>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,36 +1,59 @@
-<p>
-  <b>Nombre:</b>
-  <%= @tarea.nombre %>
-</p>
-
-<p>
-  <b>Descripcion:</b>
-  <%= @tarea.descripcion %>
-</p>
-
-<p>
-  <b>Inicio:</b>
-  <%= @tarea.inicio.strftime("%d-%m-%Y %H:%M") %>
-</p>
-
-<p>
-  <b>Termino:</b>
-  <%= @tarea.termino.strftime("%H:%M") %>
+<div class="sidebar2">
+  <nav>
+    <ul>
+      <li><%= link_to 'Editar', edit_tarea_path(@tarea) %></li>
+      <li><%= link_to 'Tareas', tareas_path %></li>
+    </ul>
+  </nav>
+</div>
 
 
 
-<p>
-  <b>Total:</b>
-<%= @tarea.total %>
-</p>
-<p>
-  <b>Usuario:</b>
-     <%= @tarea.user.email %>
-</p>
-<p>
-  <b>Proyecto:</b>
+<section class="content">
+
+
+  <h1>Detalle tarea <%= @tarea.nombre %></h1>
+  <hr>
+
+  <article>
+
+    <p>
+      <b>Proyecto:</b>
       <%= @tarea.proyecto.nombre %>
-</p>
+    </p>
+    <p>
+      <b>Descripcion:</b>
+      <%= @tarea.descripcion %>
+    </p>
 
-<%= link_to 'Edit', edit_tarea_path(@tarea) %> |
-<%= link_to 'Back', tareas_path %>
+    <p>
+      <b>Fecha:</b>
+      <%= @tarea.inicio.strftime("%d-%m-%Y") %>
+    </p>
+    <p>
+      <b>Inicio:</b>
+      <%= @tarea.inicio.strftime("%H:%M") %>
+    </p>
+
+    <p>
+      <b>Termino:</b>
+      <%= @tarea.termino.strftime("%H:%M") %>
+
+
+
+    <p>
+      <b>Total:</b>
+      <%= @tarea.total %>
+    </p>
+    <p>
+      <b>Usuario:</b>
+      <%= @tarea.user.email %>
+    </p>
+  </article>
+</section>
+
+
+
+
+
+

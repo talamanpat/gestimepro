@@ -50,7 +50,7 @@ class TareasController < ApplicationController
 
 
     if @tarea.save
-      redirect_to @tarea, notice: 'Tarea was successfully created.'
+      redirect_to @tarea, notice: 'Tarea fue creada!'
     else
       @proyectos = Proyecto.all
       render action: "new"
@@ -64,7 +64,7 @@ class TareasController < ApplicationController
 
     respond_to do |format|
       if @tarea.update_attributes(params[:tarea])
-        format.html { redirect_to @tarea, notice: 'Tarea was successfully updated.' }
+        format.html { redirect_to @tarea, notice: 'Tarea fue actualizada!' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

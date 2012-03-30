@@ -15,16 +15,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
-a:link {
-	color: #42413C;
-	text-decoration: none; 
+a:link, a:active, a:visited {
+	color: green;
 }
-a:visited {
-	color: #6E6C64;
-	text-decoration: none;
-}
-a:hover, a:active, a:focus { 
-	text-decoration: none;
+a:hover{
+    color: orange;
 }
 
 
@@ -34,8 +29,9 @@ a:hover, a:active, a:focus {
 .sidebar1 {
 	width: 100%;
 	border-radius: 30px 30px 0px 0px;
-	padding: 0 10px 10px 0;
+	padding: 0 0px 10px 0;
 	background: #5B693C;
+
 }
 
 nav ul {
@@ -114,7 +110,7 @@ nav ul a:hover, nav ul a:active, nav ul a:focus {
 	text-align: center; 
 	font-size: 14px; 
 	color: #FFF; 
-	border-radius: 0 0 10px 0;
+	border-radius: 10px 0 10px 0;
 	box-shadow:3px 3px 3px #000;
 	text-shadow: 3px 3px 3px black;
 	
@@ -139,21 +135,27 @@ padding: 20px 20px 60px 20px;
 
 
 header{
-	width: 100%;
-	padding-bottom: 0px;
 	padding-left: 30px;
+    padding-right: 30px;
 }
 
-.letraTitulo{
+h4#letraTitulo{
 	padding: 10px 10px 0px 0px;
 	font-size:14px;
 	
 	}
 	
-.letraNombre{
-	font-size: 24px;	
+h3#letraNombre{
+	font-size: 24px;
+    margin-bottom: 20px;
 	}
 
+#flashnotice{
+    color:#ff0000;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
 
 
 header, section, footer, aside, nav, article, figure {

@@ -1,6 +1,23 @@
-<h1>Editing proyecto</h1>
+<div class="sidebar2">
+  <nav>
+    <ul>
+      <li><%= link_to 'Mostrar', @proyecto %></li>
+        <li><%= link_to 'Proyectos', proyectos_path %>
+      </li>
+    </ul>
+  </nav>
+</div>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @proyecto %> |
-<%= link_to 'Back', proyectos_path %>
+
+<section class="content">
+
+  <h1>Editar proyecto</h1>
+
+  <%= render 'form' %>
+
+</section>
+
+
+
+

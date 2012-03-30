@@ -1,47 +1,71 @@
-<p>
-  <b>Nombre:</b>
-  <%= @proyecto.nombre %>
-</p>
-
-<p>
-  <b>Descripcion:</b>
-  <%= @proyecto.descripcion %>
-</p>
-<p>
-  <b>Horas totales:</b>
-  <%= @proyecto.horas_totales %>
-</p>
-
-
-<h2>Tareas</h2>
-<table>
-  <tr>
-    <th>Nombre</th>
-    <th>Descripcion</th>
-    <th>Inicio</th>
-    <th>Termino</th>
-    <th>Total</th>
-    <th>Usuario</th>
-    <th></th>
-    <th></th>
-  <!--  <th></th>        -->
-  </tr>
-
-  <% @proyecto.tareas.each do |tarea| %>
-      <tr>
-        <td><%= tarea.nombre %></td>
-        <td><%= tarea.descripcion.truncate(30) %></td>
-        <td><%= tarea.inicio.strftime("%d-%m-%Y %H:%M") %></td>
-        <td><%= tarea.termino.strftime("%H:%M") %></td>
-        <td><%= tarea.total %></td>
-        <td><%= tarea.user.nombre + " " + tarea.user.apellido + " (" << tarea.user.email + ")"    %></td>
-        <td><%= link_to 'Show', tarea %></td>
-        <!--<td><%= link_to 'Edit', edit_tarea_path(tarea) %></td>-->
-      </tr>
-  <% end %>
-</table>
+<div class="sidebar2">
+  <nav>
+    <ul>
+      <li><%= link_to 'Editar', edit_proyecto_path(@proyecto) %> </li>
+      <li><%= link_to 'Volver', proyectos_path %></li>
+    </ul>
+  </nav>
+</div>
 
 
 
-<%= link_to 'Edit', edit_proyecto_path(@proyecto) %> |
-<%= link_to 'Back', proyectos_path %>
+<section class="content">
+
+
+  <h1>Detalle proyecto <%= @proyecto.nombre %></h1>
+                  <hr>
+
+  <article>
+  <p>
+    <b>Descripcion:</b>
+    <%= @proyecto.descripcion %>
+  </p>
+  <p>
+    <b>Horas totales:</b>
+    <%= @proyecto.horas_totales %>
+  </p>
+  </article>
+                <hr>
+
+  <article>
+  <h2>Tareas</h2>
+
+
+    <div id="demo_jui">
+      <table class="display" id="example" >
+        <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripcion</th>
+          <th>Inicio</th>
+          <th>Termino</th>
+          <th>Total</th>
+          <th>Usuario</th>
+          <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @proyecto.tareas.each do |tarea| %>
+            <tr>
+              <td><%= tarea.nombre %></td>
+              <td><%= tarea.descripcion.truncate(30) %></td>
+              <td><%= tarea.inicio.strftime("%d-%m-%Y %H:%M") %></td>
+              <td><%= tarea.termino.strftime("%H:%M") %></td>
+              <td><%= tarea.total %></td>
+              <td><%= tarea.user.nombre + " " + tarea.user.apellido + " (" << tarea.user.email + ")"    %></td>
+              <td><%= link_to 'Mostrar', tarea %></td>
+            </tr>
+        <% end %>
+
+        </tbody>
+      </table>
+    </div>
+
+  </article>
+</section>
+
+
+
+
+
+

@@ -1,29 +1,49 @@
-<h1>Listing users</h1>
+<div class="sidebar2">
+  <nav>
+    <ul>
+      <li><%= link_to 'Nuevo Usuario', sign_up_path %></li>
+    </ul>
+  </nav>
+</div>
 
-<table>
-  <tr>
-    <th>Email</th>
-    <th>Nombre</th>
-    <th>Apellido</th>
-    <th>admin</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-  <% @users.each do |usuario| %>
-      <tr>
-        <td><%= usuario.email %></td>
-        <td><%= usuario.nombre %></td>
-        <td><%= usuario.apellido %></td>
-        <td><%= usuario.admin %></td>
-        <td><%= link_to 'Show', usuario %></td>
-        <td><% link_to 'Edit', edit_user_path(usuario) %></td>
-        <td><% link_to 'Destroy', usuario, confirm: 'Are you sure?', method: :delete %></td>
-      </tr>
-  <% end %>
-</table>
 
-<br />
+<section class="content">
 
-<%= link_to 'New Usuario', sign_up_path %>
+  <h1>Usuarios</h1>
+  <hr>
+
+  <article>
+    <div id="demo_jui">
+      <table class="display" id="example" >
+        <thead>
+        <tr>
+          <th>Email</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>admin</th>
+          <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @users.each do |usuario| %>
+            <tr>
+              <td><%= usuario.email %></td>
+              <td><%= usuario.nombre %></td>
+              <td><%= usuario.apellido %></td>
+              <td><%= usuario.admin %></td>
+              <td><%= link_to 'Mostrar', usuario %>
+                <% link_to 'Editar', edit_user_path(usuario) %>
+                <% link_to 'Destroy', usuario, confirm: 'Are you sure?', method: :delete %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+
+  </article>
+</section>
+
+
+
+
