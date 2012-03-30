@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gestimepro</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag :jui %>
+  <%= csrf_meta_tag %>
+
+
+
+
+</head>
+<body>
+
+
+
+<header>
+  <h4 id="letraTitulo">GesTimePro</h4>
+
+  <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash#{name}", :class =>"ui-state-highlight" %>
+  <% end %>
+</header>
+
+
+<div class="contenedorGeneral">
+               <section class="content">
+  <%= yield %>
+               </section>
+  <div class="clear"></div>
+</div>
+
+<a id="html5logo" href="http://www.w3.org/html/logo/">
+  <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+</a>
+
+
+
+</body>
+</html>

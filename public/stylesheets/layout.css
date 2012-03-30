@@ -77,9 +77,12 @@ nav ul a:hover, nav ul a:active, nav ul a:focus {
 
 
 .contenedorGeneral{
+
+    box-shadow:5px 5px 5px #000;
 	background-color: #5B693C;
-	
-	border-radius: 0px 0px 30px 30px;
+
+    margin: 0 30px;
+	border-radius: 30px 30px 30px 30px;
 	}
 
 
@@ -128,21 +131,22 @@ nav ul a:hover, nav ul a:active, nav ul a:focus {
 overflow: hidden;
 background: white;
 padding: 20px 20px 60px 20px;
-
+    border: solid 1px;
 	border-radius: 30px 0px 30px 0px;
 }
 
 
 
 header{
-	padding-left: 30px;
-    padding-right: 30px;
+	padding-left: 60px;
+    padding-right: 60px;
 }
 
 h4#letraTitulo{
 	padding: 10px 10px 0px 0px;
 	font-size:14px;
-	
+
+    margin-bottom: 5px;
 	}
 	
 h3#letraNombre{
@@ -161,6 +165,13 @@ h3#letraNombre{
 header, section, footer, aside, nav, article, figure {
 	display: block;
 }
+#html5logo{
+    display: block;
+    float: right;
+    margin: 40px 30px
+
+}
+
 
 .clear{
 display:clear;
